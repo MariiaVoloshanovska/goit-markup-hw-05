@@ -97,9 +97,8 @@ body {
 /* Contacts header */
 
 .menu-link {
-    padding-top: 24px;
-    padding-bottom: 24px;
     display: block;
+    
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -108,7 +107,40 @@ body {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.link-index {
+    color: #404BBF;
+    outline: 1px solid black;
 
+}
+
+.link-index::after {
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 4px;
+    background-color: #404BBF;;
+    border-radius: 2px;
+    content: '';
+    left: -20;
+    bottom: 0;
+}
+
+.link-foot {
+    color: #404BBF;
+    outline: 1px solid black;
+}
+
+.link-foot::after {
+    position: absolute;
+    display: block;
+    width: 66px;
+    height: 4px;
+    background-color: #404BBF;
+    border-radius: 2px;
+    content: '';
+    left: -40;
+    bottom: 0;
+}
 
 .menu-link:hover,
 .menu-link:focus {
@@ -116,8 +148,6 @@ body {
 }
 
 .menu-link-contacts {
-    padding-top: 24px;
-    padding-bottom: 24px;
     display: block;
     font-size: 16px;
     line-height: 1.5;
@@ -270,6 +300,7 @@ body {
 /* ============================ HEADER ============================ */
 
 .page-header {
+    position: relative;
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08)
 }
@@ -702,11 +733,15 @@ body {
     pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0,9);
+}
+
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     width: 408px;
     height: 576px;
     background-color: #FCFCFC;
