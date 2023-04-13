@@ -450,6 +450,9 @@ body {
     margin-right: 0;
 }
 
+.section-doing {
+    padding-bottom: 120px;
+}
 
 /* The members of a team flex */
 
@@ -869,6 +872,3 @@ body {
 
 
 
-.section-doing {
-    padding-bottom: 120px;
-}
